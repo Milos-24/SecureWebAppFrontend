@@ -25,10 +25,7 @@ export class LoginComponent {
       (response) => {
         console.log('Response from the server:', response);
 
-      //  const navigationExtras: NavigationExtras = {
-        //  state: { 'loggedUser':this.username }, 
-       // };
-        //this.router.navigate(['/users'],navigationExtras);
+        if(response==true)
         this.router.navigate(['/users',{loggedUser:this.username}]);
       },
       (error) => {

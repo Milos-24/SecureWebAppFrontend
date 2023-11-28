@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { UsersComponent } from './users/users.component';
-import { MessagesComponent } from './messages/messages.component';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { MessagesComponent } from './messages/messages.component';
     AppComponent,
     LoginComponent,
     UsersComponent,
-    MessagesComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -25,8 +25,7 @@ import { MessagesComponent } from './messages/messages.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
-      { path: 'users', component: UsersComponent }, // Include this route if you have a UsersComponent
-      { path: 'users', component: MessagesComponent}
+      { path: 'users', component: UsersComponent}, // Include this route if you have a UsersComponent
     ])
   ],
   providers: [],
